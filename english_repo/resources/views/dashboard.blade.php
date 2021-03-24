@@ -1,3 +1,4 @@
+<x-app-layout>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,11 +7,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+    </style>
 </head>
 <body>
-    <x-app-layout><h1>This is homepage when logined </h1>
-    </x-app-layout>
-    
+    <h1>This is homepage when logined </h1>  
 </body>
 </html>
+</x-app-layout>
