@@ -24,3 +24,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/about',function(){
     return view('layouts/about');
 });
+Route::get('/contact',function(){
+    return view('layouts/contact');
+});
+Route::get('/addword', function(){
+    return view('word/word_form');
+});
+Route::get('/test', [WordController::class, 'index']);

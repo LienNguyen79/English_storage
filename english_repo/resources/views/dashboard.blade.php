@@ -1,5 +1,5 @@
 <x-app-layout>
-
+<a href="/addword" class = 'underline text-blue-500'>Thêm từ mới</a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +14,8 @@
     }
     </style>
 </head>
-<body>
-    <h1>This is homepage when logined </h1>  
+<body> 
+     
 </body>
 </html>
 </x-app-layout>

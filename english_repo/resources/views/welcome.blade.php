@@ -41,9 +41,10 @@
                 <a href="login" class="text-blue-500">Trang chủ</a>
                 <a href="/about" class="ml-4">Sứ mệnh</a>
                 <a href="" class="ml-4">Về chúng tôi</a>
-                <a href="" class="ml-4">Liên hệ</a>
+                <a href="/contact" class="ml-4">Liên hệ</a>
             </div>
         <p>This is homepage when don't authentication</p>
+        
          </div>   
     </body>
 </html>
