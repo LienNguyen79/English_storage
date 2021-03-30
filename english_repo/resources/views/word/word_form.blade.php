@@ -10,7 +10,8 @@
 <body >
 <a href = "dashboard"><img src="" alt="icon" style=" width: 20px; height: 20px;">Quay lại</button></a>
 <div class="wordform">
-    <form enctype="multipart/form-data" id="form1" method="post" action="">
+    <form enctype="multipart/form-data" id="form1" method="post" action="{{url ('store_word') }}" role="form">
+    @csrf
         <label >Từ:</label>
         <input type="text" id="fname" name="word" ><br>
         <label>Loại từ:</label>
@@ -23,7 +24,7 @@
         <input type="file" name="sound" accept=".ogg,.flac,.mp3" /><br>
         <label>Ghi chú:</label>
         <input type="text" id="fname" name="note"><br>
-        <input type="submit" name="submit" value ="Thêm từ"/>
+        <input type="submit" name="submit" class="btn btn-primary" value ="Thêm từ"/>
     </form>
 </div>
 </body>

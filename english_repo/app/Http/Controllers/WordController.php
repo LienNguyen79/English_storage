@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models;
 use Illuminate\Http\Request;
-
+use Illuminate\Http\Response;
+use Illuminate\View\Component;
 class WordController extends Controller
 {
     /**
@@ -11,10 +12,10 @@ class WordController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getForm()
     {
         //
-        echo "Hello tao đang test ahuhu";
+        return view('word.word_form');
     }
 
     /**
@@ -22,64 +23,15 @@ class WordController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function storeWord(Request $request){
+        $words = new Words;
+        $words->name_word = $request->word;
+        $words->type_word = $request->type;
+        $words->mean = $request->mean;
+        $words->image_path = $request->image;
+        $words->sound_path = $request->sound;
+        $words->note = $request->note;
+        $words->save();
+        
     }
 }

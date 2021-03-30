@@ -27,7 +27,6 @@ Route::get('/about',function(){
 Route::get('/contact',function(){
     return view('layouts/contact');
 });
-Route::get('/addword', function(){
-    return view('word/word_form');
-});
-Route::get('/test', [WordController::class, 'index']);
+Route::get('/addword', 'WordController@getForm');
+Route::post('/store_word','WordController@storeWord');
+//Route::get('/test', 'WordController@index');
