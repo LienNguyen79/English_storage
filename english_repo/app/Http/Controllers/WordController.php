@@ -47,4 +47,10 @@ class WordController extends Controller
         $words = DB::table('words')->select('*')->where('user_id','1')->get();
         return view('word.display_word',compact('words'));
     }
+
+    public function update(Request $request){
+        return view('word.update');
+    }
+
+    
 }
