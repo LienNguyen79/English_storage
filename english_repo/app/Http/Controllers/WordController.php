@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models;
+use App\Models\Words;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
 class WordController extends Controller
 {
     /**
@@ -12,6 +13,8 @@ class WordController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //hiển thị form thêm từ 
     public function getForm()
     {
         //
@@ -23,8 +26,11 @@ class WordController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //xử lý thêm từ vào DB
     public function storeWord(Request $request){
+        //echo $request;        
         $words = new Words;
+        $words->user_id = 1;
         $words->name_word = $request->word;
         $words->type_word = $request->type;
         $words->mean = $request->mean;
@@ -33,5 +39,12 @@ class WordController extends Controller
         $words->note = $request->note;
         $words->save();
         
+    }
+
+    //hiển thị danh sách từ của user
+    public function getWord(){
+
+        $words = DB::table('words')->select('*')->where('user_id','1')->get();
+        return view('word.display_word',compact('words'));
     }
 }

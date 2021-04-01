@@ -1,5 +1,7 @@
 <x-app-layout>
 <a href="/addword" class = 'underline text-blue-500'>Thêm từ mới</a>
+<br>
+<a href="/display_word" class = 'underline text-blue-500'>Hiển thị danh sách từ</a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
