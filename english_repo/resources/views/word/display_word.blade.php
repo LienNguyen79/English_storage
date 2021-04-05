@@ -1,17 +1,21 @@
-<!-- //trong learn_controller gán cái mảng lấy được khi query ra vào words:$data = array('words' => $data);
-//thì khi extract nó lấy cái words thành biến nên dùng được cái foreach $words -->
-
+<x-app-layout>
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho từ của bạn</title>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kho từ của bạn</title>
   </head>
-  <body>
+<body>
   <div>
   
 <table >
+
   <th>Số thứ tự</th>
   <th>Từ</th>
   <th>Loại từ</th>
@@ -43,7 +47,7 @@
             <input type="text" hidden name="id" value=""> -->
             <a href = "/update"> <button name='update'>Sửa từ</button> 
           <!-- </form> -->
-          <form method="POST" >
+          <form method="GET" >
             <input type="text" hidden name="id" value="">
             <button name='delete'> Xóa từ </button>
           </form>
@@ -58,3 +62,5 @@
 </div>
 
   </body>
+</html>
+</x-app-layout>

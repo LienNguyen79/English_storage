@@ -31,7 +31,14 @@
   </style>
 </head>
 <body>
-
+<div class="hidden fixed top-0 left-0 px-6 py-4 sm:block">
+                <img></img>
+                
+                <a href="login" class="text-blue-500">Trang chủ</a>
+                <a href="/about" class="ml-4">Sứ mệnh</a>
+                <a href="" class="ml-4">Về chúng tôi</a>
+                <a href="" class="ml-4">Liên hệ</a>
+            </div>
 
     <section class="contact_us">
         <div>

@@ -13,9 +13,20 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Homepage') }}
+                        {{ __('Trang chủ') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="addword" :active="request()->routeIs('addword')">
+                        {{ __('Thêm từ mới') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="display_word" :active="request()->routeIs('display_word')">
+                        {{ __('Hiển thị danh sách từ') }}
+                    </x-jet-nav-link>
+                    <form action="" method="POST">
+                    <input type="text" placeholder="Tìm kiếm từ.." name = "searchWord" >
+                    <button type="submit"> <img src="" alt="icon" style=" width: 10px; height: 25px;" ></button>
+                    </form>
                 </div>
+                
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

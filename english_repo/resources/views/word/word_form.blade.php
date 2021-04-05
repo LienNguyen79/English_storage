@@ -1,12 +1,19 @@
+<x-app-layout>
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="UTF-8">
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm từ mới</title>
-    
-  <link rel="stylesheet" href="assets/css/word_form_style.css" type="text/css">
-  </head>
+    <style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+    </style>
+</head>
+ 
 <body >
 <a href = "dashboard"><img src="" alt="icon" style=" width: 20px; height: 20px;">Quay lại</button></a>
 <div class="wordform">
@@ -29,3 +36,4 @@
 </div>
 </body>
 </html>
+</x-app-layout>
