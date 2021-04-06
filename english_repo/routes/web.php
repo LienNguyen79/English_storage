@@ -38,5 +38,6 @@ Route::post('/store_word','WordController@storeWord');
 //hiển thị danh sách từ
 Route::get('/display_word', 'WordController@getWord'); 
 
+Route::post('/display_word', 'WordController@delete');
 //sửa từ 
 Route::get('/update', 'WordController@update');

@@ -47,8 +47,9 @@
             <input type="text" hidden name="id" value=""> -->
             <a href = "/update"> <button name='update'>Sửa từ</button> 
           <!-- </form> -->
-          <form method="GET" >
-            <input type="text" hidden name="id" value="">
+          <form method="POST" >
+          @csrf
+            <input type="text" hidden name="id" value="<?php echo $arr->id; ?>">
             <button name='delete'> Xóa từ </button>
           </form>
         <td>
