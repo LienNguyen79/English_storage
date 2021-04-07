@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kho từ của bạn</title>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kho từ của bạn</title>
+
   </head>
 <body>
   <div>
@@ -45,11 +44,16 @@
         <td>
           <!-- <form method="POST" >
             <input type="text" hidden name="id" value=""> -->
-            <a href = "/update"> <button name='update'>Sửa từ</button> 
+            <!-- <a href = "/update"> <button name='update'>Sửa từ</button>  -->
           <!-- </form> -->
           <form method="POST" >
           @csrf
             <input type="text" hidden name="id" value="<?php echo $arr->id; ?>">
+            <button name='update'> Sửa từ </button>
+          <!-- </form>
+          <form method="POST" >
+          @csrf -->
+            <!-- <input type="text" hidden name="id" value=""> -->
             <button name='delete'> Xóa từ </button>
           </form>
         <td>

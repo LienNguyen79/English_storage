@@ -15,7 +15,7 @@
 </head>
  
 <body >
-<a href = "dashboard"><img src="" alt="icon" style=" width: 20px; height: 20px;">Quay lại</button></a>
+<!-- <a href = "dashboard"><img src="" alt="icon" style=" width: 20px; height: 20px;">Quay lại</button></a> -->
 <div class="wordform">
     <form enctype="multipart/form-data" id="form1" method="post" action="{{url ('store_word') }}" role="form">
     @csrf

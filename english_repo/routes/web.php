@@ -40,4 +40,5 @@ Route::get('/display_word', 'WordController@getWord');
 
 Route::post('/display_word', 'WordController@delete');
 //sửa từ 
-Route::get('/update', 'WordController@update');
+Route::get('/update', 'WordController@delete');
+Route::post('/update_word', 'WordController@update');
