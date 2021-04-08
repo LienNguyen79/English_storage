@@ -18,13 +18,16 @@
                     <x-jet-nav-link href="addword" :active="request()->routeIs('addword')">
                         {{ __('Thêm từ mới') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="addword" :active="request()->routeIs('addword')">
+                        {{ __('Thêm nhiều từ mới') }}
+                    </x-jet-nav-link>
                     <x-jet-nav-link href="display_word" :active="request()->routeIs('display_word')">
                         {{ __('Hiển thị danh sách từ') }}
                     </x-jet-nav-link>
-                    <form action="" method="GET">
+                    <form action="" method="POST">
                     @csrf
                     <input type="text" placeholder="Tìm kiếm từ..." name = "searchWord" >
-                    <button type="submit"> <img src="" alt="icon" style=" width: 10px; height: 25px;" ></button>
+                    <button type="submit" name = "searchButton"> <img src="" alt="icon" style=" width: 10px; height: 25px;" ></button>
                     </form>
                 </div>
                 

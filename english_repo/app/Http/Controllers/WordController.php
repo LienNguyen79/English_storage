@@ -37,7 +37,7 @@ class WordController extends Controller
         $words->name_word = $request->word;
         $words->type_word = $request->type;
         $words->mean = $request->mean;
-        if($request->image->isValid()){ 
+        if($request->hasFile('image')){ 
             $file_image = $request->file('image');
             $file_image_name = $file_image->getClientOriginalName();
             $file_image_size = round($file_image->getSize() / 1024);
@@ -49,7 +49,7 @@ class WordController extends Controller
             $words->image_path = $pathImage.$file_image_name;
             }
         else $words->image_path = NULL;
-        if($request->sound->isValid()){ 
+        if($request->hasFile('sound')){ 
             $file_sound = $request->file('sound');
             $file_sound_name = $file_sound->getClientOriginalName();
             $file_sound_size = round($file_sound->getSize() / 1024);
@@ -80,7 +80,7 @@ class WordController extends Controller
         $updateWord = new Words; 
         $pathImage= base_path().'/public/image/';
         $pathSound = base_path().'/public/sound/';  
-        if($request->image->isValid()){ 
+        if($request->hasFile('image')){ 
             $file_image = $request->file('image');
             $file_image_name = $file_image->getClientOriginalName();
             $file_image_size = round($file_image->getSize() / 1024);
@@ -91,8 +91,8 @@ class WordController extends Controller
             $file_image->move(base_path().'/public/image/', $file_image_name);
             
             }
-        else $words->image_path = NULL;
-        if($request->sound->isValid()){ 
+        //else $words->image_path = NULL;
+        if($request->hasFile('sound')){ 
             $file_sound = $request->file('sound');
             $file_sound_name = $file_sound->getClientOriginalName();
             $file_sound_size = round($file_sound->getSize() / 1024);
@@ -102,7 +102,7 @@ class WordController extends Controller
             $file_sound->move(base_path().'/public/sound/', $file_sound_name);
             
             }
-        else $words->sound_path = NULL;
+        //else $words->sound_path = NULL;
         //else $words->sound_path = NULL;
         $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
         
@@ -116,7 +116,7 @@ class WordController extends Controller
         
     
 
-    public function delete(Request $request){
+    public function deleteAndUpdate(Request $request){
         if(isset($_POST['update'])){
             $updateWord = new Words;
             $id = $_POST['id'];

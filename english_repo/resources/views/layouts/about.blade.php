@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Về chúng tôi</title>
-    
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
   <link rel="stylesheet" href="resources/css/home_style.css" type="text/css">
   <link href="resources\css\home_style.css" rel="stylesheet" type="text/css" media="all">
   <style>
