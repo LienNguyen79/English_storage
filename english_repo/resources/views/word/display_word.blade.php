@@ -25,7 +25,8 @@
   <th>Ngày tạo</th>
   <th>Ngày sửa</th>
   <th> Thao tác</th>
-  <?php  $i = 1;  
+  <?php  $i = 1;    
+
     foreach ($words as $arr){
       echo "<tr>";
       //echo $arr['image'];
@@ -36,24 +37,17 @@
         <td><?php echo  $arr->name_word; ?> </td>
         <td><?php echo  $arr->type_word; ?> </td>
         <td><?php echo  $arr->mean; ?> </td>
-        <td><img style=" width: 80px; height: 80px;  margin :auto; display: block;" src='<?php echo $arr->image_path ?>' alt="Không có hình ảnh"> </td>
-        <td><audio controls><source src="<?php echo $arr->sound_path ?>" type="audio/mpeg"></audio> </td>
+        <td><img style=" width: 80px; height: 80px;  margin :auto; display: block;" src="{{ asset($arr->image_path) }}" alt="Không có hình ảnh"> </td>
+        <td><audio src="{{ asset($arr->sound_path) }}" controls></audio> </td>
         <td><?php echo  $arr->note; ?> </td>
         <td><?php echo  $arr->created_at; ?> </td>
         <td><?php echo  $arr->updated_at; ?> </td>
         <td>
-          <!-- <form method="POST" >
-            <input type="text" hidden name="id" value=""> -->
-            <!-- <a href = "/update"> <button name='update'>Sửa từ</button>  -->
-          <!-- </form> -->
+         
           <form method="POST" >
           @csrf
             <input type="text" hidden name="id" value="<?php echo $arr->id; ?>">
             <button name='update'> Sửa từ </button>
-          <!-- </form>
-          <form method="POST" >
-          @csrf -->
-            <!-- <input type="text" hidden name="id" value=""> -->
             <button name='delete'> Xóa từ </button>
           </form>
         <td>

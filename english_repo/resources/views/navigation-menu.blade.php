@@ -27,7 +27,7 @@
                     <form action="" method="POST">
                     @csrf
                     <input type="text" placeholder="Tìm kiếm từ..." name = "searchWord" >
-                    <button type="submit" name = "searchButton"> <img src="" alt="icon" style=" width: 10px; height: 25px;" ></button>
+                    <button type="submit" name = "searchButton"> <img src="{{ asset('logo.search_icon.jpg') }}" alt="icon" style=" width: 10px; height: 25px;" ></button>
                     </form>
                 </div>
                 

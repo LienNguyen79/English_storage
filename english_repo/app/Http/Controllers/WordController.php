@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\LengthAwarePaginator;
 class WordController extends Controller
 {
     /**
@@ -30,14 +31,14 @@ class WordController extends Controller
     //xử lý thêm từ vào DB
     public function storeWord(Request $request){
         //echo $request; 
-        $pathImage= base_path().'/public/image/';
-        $pathSound = base_path().'/public/sound/';
+        $pathImage= 'image/';
+        $pathSound = 'sound/';
         $words = new Words;
         $words->user_id = DB::table('sessions')->value('user_id');
         $words->name_word = $request->word;
         $words->type_word = $request->type;
         $words->mean = $request->mean;
-        if($request->hasFile('image')){ 
+        if($request->image != null && $request->hasFile('image')){ 
             $file_image = $request->file('image');
             $file_image_name = $file_image->getClientOriginalName();
             $file_image_size = round($file_image->getSize() / 1024);
@@ -75,47 +76,7 @@ class WordController extends Controller
         $words = DB::table('words')->select('*')->where('user_id',$session_id)->get();
         return view('word.display_word',compact('words'));
     }
-
-    public function update(Request $request){
-        $updateWord = new Words; 
-        $pathImage= base_path().'/public/image/';
-        $pathSound = base_path().'/public/sound/';  
-        if($request->hasFile('image')){ 
-            $file_image = $request->file('image');
-            $file_image_name = $file_image->getClientOriginalName();
-            $file_image_size = round($file_image->getSize() / 1024);
-            $file_image_ex = $file_image->getClientOriginalExtension();
-            $file_image_mime = $file_image->getMimeType();        
-            //if (!in_array($file_ex, array('jpg', 'gif', 'png'))) return Redirect::to('/')->withErrors('Invalid image extension we just allow JPG, GIF, PNG');            
-            //$newname = base_path().'/public/image/'.$file_name;
-            $file_image->move(base_path().'/public/image/', $file_image_name);
-            
-            }
-        //else $words->image_path = NULL;
-        if($request->hasFile('sound')){ 
-            $file_sound = $request->file('sound');
-            $file_sound_name = $file_sound->getClientOriginalName();
-            $file_sound_size = round($file_sound->getSize() / 1024);
-            $file_sound_ex = $file_sound->getClientOriginalExtension();
-            $file_sound_mime = $file_sound->getMimeType();                 
-            //$newname = base_path().'/public/sound/'.$file_name;
-            $file_sound->move(base_path().'/public/sound/', $file_sound_name);
-            
-            }
-        //else $words->sound_path = NULL;
-        //else $words->sound_path = NULL;
-        $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
-        
-        //$updateWord->save();
-        echo '<dialog open style="color: green; text-align: center; display: middle">
-                        <p>Sửa từ thành công</p>
-                        <p> Hãy xem trong: Kho từ của bạn </p>
-                        <a href="/display_word" class = "underline text-blue-500"><button>OK</button></a>
-                      </dialog>';
-    }   
-        
-    
-
+// xu ly button update and delete in display_view
     public function deleteAndUpdate(Request $request){
         if(isset($_POST['update'])){
             $updateWord = new Words;
@@ -127,7 +88,6 @@ class WordController extends Controller
         if(isset($_POST['delete'])){
             $deleWord = new Words;
             $id = $_POST['id'];
-            //$id = DB::table('words')->
             $deleWord = DB::table('words')->where('id',$id)->delete();
             echo '<dialog open style="color: green; text-align: center; display: middle">
             <p>Xóa từ thành công</p>
@@ -136,6 +96,59 @@ class WordController extends Controller
             </dialog>';
         }
     }
+// update word 
+    public function update(Request $request){
+        $updateWord = new Words; 
+        $pathImage= 'image/';
+        $pathSound = 'sound/';  
+        if($request->image != NULL && $request->hasFile('image')){ 
+            $file_image = $request->file('image');
+            $file_image_name = $file_image->getClientOriginalName();
+            $file_image_size = round($file_image->getSize() / 1024);
+            $file_image_ex = $file_image->getClientOriginalExtension();
+            $file_image_mime = $file_image->getMimeType();        
+            //if (!in_array($file_ex, array('jpg', 'gif', 'png'))) return Redirect::to('/')->withErrors('Invalid image extension we just allow JPG, GIF, PNG');            
+            //$newname = base_path().'/public/image/'.$file_name;
+            $file_image->move(base_path().'/public/image/', $file_image_name);        
+            }
+
+        //else $words->image_path = NULL;
+        if($request->sound != NULL && $request->hasFile('sound')){ 
+            $file_sound = $request->file('sound');
+            $file_sound_name = $file_sound->getClientOriginalName();
+            $file_sound_size = round($file_sound->getSize() / 1024);
+            $file_sound_ex = $file_sound->getClientOriginalExtension();
+            $file_sound_mime = $file_sound->getMimeType();                 
+            //$newname = base_path().'/public/sound/'.$file_name;
+            $file_sound->move(base_path().'/public/sound/', $file_sound_name);
+            
+            }
+    
+        //$updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
+        if ($request->image != NULL){
+            if ($request->sound != NULL){
+                $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
+            }
+            else {
+                $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'mean'=>($request->mean), 'note'=>($request->note)]);
+            }
+        }
+        else {
+            if ($request->sound != NULL){
+                $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
+            }
+            else {
+                $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'mean'=>($request->mean), 'note'=>($request->note)]);
+            }
+        }
+        //$updateWord->save();
+        echo '<dialog open style="color: green; text-align: center; display: middle">
+                        <p>Sửa từ thành công</p>
+                        <p> Hãy xem trong: Kho từ của bạn </p>
+                        <a href="/display_word" class = "underline text-blue-500"><button>OK</button></a>
+                      </dialog>';
+    }   
+        
 
     
 }

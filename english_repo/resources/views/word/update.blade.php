@@ -19,9 +19,9 @@
         <label>Nghĩa:</label>
         <input type="text" id="fname" name="mean" value="<?php echo $updateWord[0]->mean; ?> " ><br>
         <label>Ảnh:</label>
-        <input type="file" name="image" accept=".img,.png" value="<?php echo $updateWord[0]->image_path; ?> "  /><br>
+        <input type="file" name="image" accept=".img,.png" value="{{ asset($updateWord[0]->image_path) }}"  /><br>
         <label>Phát âm:</label>
-        <input type="file" name="sound" accept=".ogg,.flac,.mp3" value="<?php echo $updateWord[0]->sound_path; ?> "  /><br>
+        <input type="file" name="sound" accept=".ogg,.flac,.mp3" value="{{ asset($updateWord[0]->sound_path) }}"  /><br>
         <label>Ghi chú:</label>
         <input type="text" id="fname" name="note" value="<?php echo $updateWord[0]->note; ?> " ><br>
         <input type="submit" name="submit" class="btn btn-primary" value ="Sửa từ"/>
