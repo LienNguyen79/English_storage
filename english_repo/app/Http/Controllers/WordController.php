@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
 use App\Models\Words;
 use App\Http\Controllers\Middleware;
 use Illuminate\Http\Request;
@@ -73,7 +74,10 @@ class WordController extends Controller
     //hiển thị danh sách từ của user
     public function getWord(){
         $session_id = DB::table('sessions')->value('user_id');
-        $words = DB::table('words')->select('*')->where('user_id',$session_id)->get();
+        //$words = DB::table('words')->select('*')->where('user_id',$session_id)->get()->paginate(5);
+        $words = DB::table('words')->where('user_id',$session_id)->paginate(5);
+        //$words = DB::table('words')->paginate(2);
+        //dd($words);
         return view('word.display_word',compact('words'));
     }
 // xu ly button update and delete in display_view
@@ -107,12 +111,8 @@ class WordController extends Controller
             $file_image_size = round($file_image->getSize() / 1024);
             $file_image_ex = $file_image->getClientOriginalExtension();
             $file_image_mime = $file_image->getMimeType();        
-            //if (!in_array($file_ex, array('jpg', 'gif', 'png'))) return Redirect::to('/')->withErrors('Invalid image extension we just allow JPG, GIF, PNG');            
-            //$newname = base_path().'/public/image/'.$file_name;
             $file_image->move(base_path().'/public/image/', $file_image_name);        
             }
-
-        //else $words->image_path = NULL;
         if($request->sound != NULL && $request->hasFile('sound')){ 
             $file_sound = $request->file('sound');
             $file_sound_name = $file_sound->getClientOriginalName();
@@ -123,8 +123,6 @@ class WordController extends Controller
             $file_sound->move(base_path().'/public/sound/', $file_sound_name);
             
             }
-    
-        //$updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
         if ($request->image != NULL){
             if ($request->sound != NULL){
                 $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'image_path'=>($pathImage.$file_image_name),'sound_path'=>($pathSound.$file_sound_name) ,'mean'=>($request->mean), 'note'=>($request->note)]);
@@ -141,8 +139,7 @@ class WordController extends Controller
                 $updateWord = DB::table('words')->where('id',$request->id)->update(['name_word'=>($request->word),'type_word'=>($request->type),'mean'=>($request->mean), 'note'=>($request->note)]);
             }
         }
-        //$updateWord->save();
-        echo '<dialog open style="color: green; text-align: center; display: middle">
+        echo '<dialog open style=" background: #01DFD7; color: green; text-align: center; display: middle">
                         <p>Sửa từ thành công</p>
                         <p> Hãy xem trong: Kho từ của bạn </p>
                         <a href="/display_word" class = "underline text-blue-500"><button>OK</button></a>

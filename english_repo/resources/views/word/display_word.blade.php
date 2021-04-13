@@ -59,6 +59,8 @@
   ?>
 </table>
 </div>
+{{ $words->appends(Request::all())->links() }}
+
 
   </body>
 </html>

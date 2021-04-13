@@ -14,15 +14,24 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+// search theo name word, type word, mean
     public function search(Request $request){
         if (isset($_GET['searchButton'])){
             $searchWord = $_GET['searchWord'];       
-            if (strlen(trim($searchWord)) > 1) {
+            if (strlen(trim($searchWord)) > 0) {
                 $words = new Words; 
                 $words->user_id = DB::table('sessions')->value('user_id');
-                $words = DB::table('words')->where('name_word','like',$searchWord)->get();
-                return view('word.display_word',compact('words'));
+                $words = DB::table('words')
+                ->where('name_word','like',$searchWord.'%')
+                ->orWhere('type_word','like',$searchWord)
+                ->orWhere('mean','like','%'.$searchWord.'%')
+                ->get();
+                //var_dump($words);
+                //die();
+                if(empty($words)){
+                    echo 'Khong tim thay tu nay dau hiuhiu';
+                }
+                else return view('word.display_word',compact('words'));
              }
         }
     }
