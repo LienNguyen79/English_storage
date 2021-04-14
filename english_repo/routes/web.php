@@ -44,3 +44,5 @@ Route::get('/update', 'WordController@deleteAndUpdate');
 Route::post('/update_word', 'WordController@update');
 //search word
 Route::get('/search', 'SearchController@search');
+//export file
+Route::get('word/export','WordController@export');

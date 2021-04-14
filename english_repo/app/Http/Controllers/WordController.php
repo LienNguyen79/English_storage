@@ -9,6 +9,8 @@ use Illuminate\Http\Response;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
+use App\Exports\WordExport;
+use Maatwebsite\Excel\Facades\Excel;
 class WordController extends Controller
 {
     /**
@@ -145,7 +147,11 @@ class WordController extends Controller
                         <a href="/display_word" class = "underline text-blue-500"><button>OK</button></a>
                       </dialog>';
     }   
-        
+    // export danh sach tu cua user 
+    public function export(){
+        return Excel::download(new WordExport,'Words.xlsx');//downlload file 
+        return Excel::store(new WordExport,'Words.xlsx','disk-name');//luu file ve local 
+    }    
 
     
 }
