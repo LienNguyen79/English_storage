@@ -18,7 +18,7 @@
                     <x-jet-nav-link href="addword" :active="request()->routeIs('addword')">
                         {{ __('Thêm từ mới') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="addword" :active="request()->routeIs('addword')">
+                    <x-jet-nav-link href="add_many_words" :active="request()->routeIs('addword')">
                         {{ __('Thêm nhiều từ mới') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="display_word" :active="request()->routeIs('display_word')">

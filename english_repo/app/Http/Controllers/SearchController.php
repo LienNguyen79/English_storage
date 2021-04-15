@@ -26,12 +26,10 @@ class SearchController extends Controller
                 ->orWhere('type_word','like',$searchWord)
                 ->orWhere('mean','like','%'.$searchWord.'%')
                 ->get();
-                //var_dump($words);
+                //dd($words);
                 //die();
-                if(empty($words)){
-                    echo 'Khong tim thay tu nay dau hiuhiu';
-                }
-                else return view('word.display_word',compact('words'));
+                
+                return view('word.search_word',compact('words'));
              }
         }
     }
