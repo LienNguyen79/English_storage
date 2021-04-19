@@ -4,14 +4,14 @@ namespace App\Exports;
 
 use App\Models\Words;
 use Maatwebsite\Excel\Concerns\FromCollection;
-
-class WordExport implements FromCollection
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
+class WordExport implements FromView
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function collection()
-    {
-        return Words::all();
-    }
+    public function view(): View{
+      return view('exports.words',[
+          'words' => Words::all()->where('user_id',DB::table('sessions')->value('user_id'))
+      ]);
+  }
 }
