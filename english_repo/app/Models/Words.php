@@ -9,6 +9,7 @@ class Words extends Model
 {
     use HasFactory;
     protected $table = 'words';
+    protected $fillable = ['name_word','type_word','mean','image_path','sound_path','note'];
     public function user(){
         return $this->belongsto('App\User');
     }

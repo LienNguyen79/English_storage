@@ -22,9 +22,9 @@ class WordImportExportController extends Controller
     */
     public function import() 
     {
-        Excel::import(new WordImport,request()->file('file'));
+        $import = Excel::import(new WordImport,request()->file('file'));
              
-        return back();
+        return redirect()->back()->with('success','Success');
     }
     // export danh sach tu cua user 
     // public function export(){

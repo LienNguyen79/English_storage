@@ -17,10 +17,10 @@
         </div>
         <div class="card-body">
             <form action="{{ url('import') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <input type="file" name="file" class="form-control">
+            {{ csrf_field() }}
+                <input id="file" type="file" name="file" class="form-control" accept=".xlsx, .xls, .csv, .ods">
                 <br>
-                <button class="btn btn-success">Import Words Data</button>
+                <button type="submit" class="btn btn-success">Import Words Data</button>
                 <a class="btn btn-warning" href="{{ url('export') }}">Export Words Data</a>
             </form>
         </div>

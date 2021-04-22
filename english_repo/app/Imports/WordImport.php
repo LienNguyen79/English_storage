@@ -5,23 +5,24 @@ namespace App\Imports;
 use App\Models\Words;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Illuminate\Support\Facades\DB;
+
 class WordImport implements ToModel,WithHeadingRow
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+    protected $fillable = ['name_word','type_word','mean','image_path','sound_path','note'];
+    public function headingRow() : int {
+        return 1;
+    }
     public function model(array $row)
     {
-        return new Words([
-            'name_word' => $row[1],
-            'type_word' => $row[2],
-            'mean' => $row[3],
-            'image_path' =>$row[4],
-            'sound_path' => $row[5],
-            'note' => $row[6],
-            'user_id' => $row[7]
-        ]);
+        $words = new Words;
+        $words->name_word = $row['tu'];
+        $words->type_word = $row['loai_tu'];
+        $words->mean = $row['nghia'];
+        $words->image_path = $row['hinh_anh'];
+        $words->sound_path = $row['am_thanh'];
+        $words->note = $row['ghi_chu'];
+        $words->user_id = DB::table('sessions')->value('user_id');
+        return $words;
     }
 }
