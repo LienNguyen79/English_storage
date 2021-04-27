@@ -4,10 +4,11 @@ namespace App\Imports;
 
 use App\Models\Words;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithBatchInserts;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Illuminate\Support\Facades\DB;
 
-class WordImport implements ToModel,WithHeadingRow
+class WordImport implements ToModel,WithHeadingRow,WithBatchInserts
 {
     protected $fillable = ['name_word','type_word','mean','image_path','sound_path','note'];
     public function headingRow() : int {
@@ -24,5 +25,8 @@ class WordImport implements ToModel,WithHeadingRow
         $words->note = $row['ghi_chu'];
         $words->user_id = DB::table('sessions')->value('user_id');
         return $words;
+    }
+    public function batchSize(): int{
+        return 20;
     }
 }
