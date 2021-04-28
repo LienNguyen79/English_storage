@@ -13,10 +13,13 @@
     <style>
     body {
         font-family: 'Nunito', sans-serif;
+        background-image: url("..\public\image_frontend\english-course-930x620.jpg")
     }
+    
     </style>
 </head>
 <body> 
+@extends('layouts.footer')
 </body>
 </html>
 </x-app-layout>

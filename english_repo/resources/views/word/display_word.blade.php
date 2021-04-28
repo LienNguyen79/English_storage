@@ -58,10 +58,12 @@
       
   ?>
 </table>
+
 </div>
 {{ $words->appends(Request::all())->links() }}
 
 
-  </body>
+</body>
+
 </html>
 </x-app-layout>

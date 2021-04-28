@@ -46,4 +46,7 @@
         
          </div>   
     </body>
+    <footer>
+        @extends('layouts.footer')
+    </footer>
 </html>

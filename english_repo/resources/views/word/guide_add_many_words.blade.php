@@ -23,10 +23,12 @@
                 <button type="submit" class="btn btn-success">Import Words Data</button>
                 <a class="btn btn-warning" href="{{ url('export') }}">Export Words Data</a>
             </form>
-        </div>
+          
+        </div>       
     </div>
 </div>
-   
+
 </body>
+
 </html>
 </x-app-layout>
