@@ -50,4 +50,5 @@ Route::get('/add_many_words','WordImportExportController@importExportView');
 Route::get('/export','WordImportExportController@export');
 //import file 
 Route::post('/import','WordImportExportController@import');
+Route::post('/post_email','EmailController@postEmail');
 

@@ -67,14 +67,15 @@
       <h4>Đăng kí nhận bản tin</h4>
       <p>Cập nhật thông tin một cách nhanh nhất để không bỏ lỡ thông báo mới nào về chúng tôi
       </p>
-      <form action="home">
+      <form action="{{ url('post_email') }}" enctype="multipart/form-data" id="form1" method="post">
         <div class="form-group">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder='Enter email address'
               onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Enter email address'">
+              onblur="this.placeholder = 'Enter email address'" name="Email">
             <div class="input-group-append">
-              <button class="btn btn_1" type="button">Gửi</button>
+              <!-- <button class="btn btn_1" type="button" name="postEmail">Gửi</button> -->
+              <input type="submit" name="postEmail" class="btn btn-primary" value="Gửi">
             </div>
           </div>
         </div>

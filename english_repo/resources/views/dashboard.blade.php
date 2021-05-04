@@ -13,12 +13,15 @@
     <style>
     body {
         font-family: 'Nunito', sans-serif;
-        background-image: url("..\public\image_frontend\english-course-930x620.jpg")
+        background-image: url("..\public\image_frontend\english-course-930x620.jpg");
+        background-color: #92a8d1;
     }
     
     </style>
 </head>
 <body> 
+<h1>Hello @extends('body_dasboard')</h1>
+
 @extends('layouts.footer')
 </body>
 </html>
