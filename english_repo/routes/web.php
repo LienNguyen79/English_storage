@@ -21,12 +21,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 //layout giới thiệu
-Route::get('/about',function(){
-    return view('layouts/about');
+Route::get('/cource',function(){
+    return view('cource');
 });
 //layout liên hệ 
 Route::get('/contact',function(){
-    return view('layouts/contact'); 
+    return view('contact'); 
 });
 
 // hiển thị form thêm từ
