@@ -251,7 +251,7 @@
             </div>
         </div>
     </footer>
-    </footer>
+
     <script src="{{asset('js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
     <script src="{{asset('js/popper.min.js')}}"></script>

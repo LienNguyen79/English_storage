@@ -5,9 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
-                    </a>
+                    <a class="navbar-brand" href="dashboard"> <img src="image_frontend/logo.png" alt="logo"> </a>
                 </div>
 
                 <!-- Navigation Links -->
@@ -15,19 +13,19 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Trang chủ') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="addword" :active="request()->routeIs('addword')">
+                    <x-jet-nav-link href="{{ url('addword') }}" :active="request()->routeIs('addword')">
                         {{ __('Thêm từ mới') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="add_many_words" :active="request()->routeIs('addword')">
+                    <x-jet-nav-link href="{{ url('add_many_words') }}" :active="request()->routeIs('add_many_words')">
                         {{ __('Thêm nhiều từ mới') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="display_word" :active="request()->routeIs('display_word')">
+                    <x-jet-nav-link href="{{ url('display_word') }}" :active="request()->routeIs('display_word')">
                         {{ __('Hiển thị danh sách từ') }}
                     </x-jet-nav-link>
                     <form action="/search" method="GET">
                     @csrf
                     <input type="text" placeholder="Tìm kiếm từ..." name = "searchWord" >
-                    <button type="submit" name = "searchButton"> <img src="{{ asset('logo.search_icon.jpg') }}" alt="icon" style=" width: 10px; height: 25px;" ></button>
+                    <button style="width:30px; height:30px;" type="submit" name = "searchButton"> <img src="icons/search_icon.jpg" alt="logo"></button>
                     </form>
                 </div>
                 
