@@ -102,6 +102,11 @@
                         <div class="breadcrumb_iner_item">
                             <h2>Kết nối với chúng tôi</h2>
                             <p>Trang Chủ<span>/</span>Liên hệ</p>
+                            <div class="contact_info">
+                            <p><span> Địa chỉ :</span> Số 3 Duy Tân, Càu Giấy, Hà Nội </p>
+                            <p><span> Điện thoại :</span> +84 328857765</p>
+                            <p><span> Email : </span>nguyenliensera@gmail.com </p>
+                        </div>
                         </div>
                     </div>
                 </div>

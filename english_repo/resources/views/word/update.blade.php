@@ -78,7 +78,7 @@
     </style>
 </head>
 <body>
-<a href = "display_word"><img src="" alt="icon" style=" width: 20px; height: 20px;">Quay lại</button></a>
+<a href = "display_word"><img src="icons/back_icon.jpg" alt="icon" style=" width: 20px; height: 20px;">Quay lại</button></a>
 <div class="wordform">
     <form enctype="multipart/form-data" id="form1" method="post" action="{{url ('update_word') }}" role="form">
     @csrf

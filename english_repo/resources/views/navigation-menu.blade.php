@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a class="navbar-brand" href="dashboard"> <img src="image_frontend/logo.png" alt="logo"> </a>
+                    <a class="navbar-brand" href="dashboard"> <img src="http://127.0.0.1:8000/image_frontend/logo.png" alt="logo"> </a>
                 </div>
 
                 <!-- Navigation Links -->
@@ -22,11 +22,15 @@
                     <x-jet-nav-link href="{{ url('display_word') }}" :active="request()->routeIs('display_word')">
                         {{ __('Hiển thị danh sách từ') }}
                     </x-jet-nav-link>
-                    <form action="/search" method="GET">
+                    <x-jet-nav-link>
+                    <form action="/search" method="POST">
                     @csrf
+                    {{ method_field('GET') }}
                     <input type="text" placeholder="Tìm kiếm từ..." name = "searchWord" >
-                    <button style="width:30px; height:30px;" type="submit" name = "searchButton"> <img src="icons/search_icon.jpg" alt="logo"></button>
+                    <!-- <button style="width:30px; height:30px;" type="submit" name = "searchButton"> <img src="icons/search_icon.jpg" alt="logo"></button> -->
+                    <button type="submit" name = "searchButton"><i class="fa fa-search"></i></button>
                     </form>
+                    </x-jet-nav-link>
                 </div>
                 
             </div>
