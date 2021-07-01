@@ -103,7 +103,7 @@
                             <h2>Kết nối với chúng tôi</h2>
                             <p>Trang Chủ<span>/</span>Liên hệ</p>
                             <div class="contact_info">
-                            <p><span> Địa chỉ :</span> Số 3 Duy Tân, Càu Giấy, Hà Nội </p>
+                            <p><span> Địa chỉ :</span> Số 3 Duy Tân, Cầu Giấy, Hà Nội </p>
                             <p><span> Điện thoại :</span> +84 328857765</p>
                             <p><span> Email : </span>nguyenliensera@gmail.com </p>
                         </div>
@@ -131,7 +131,7 @@
                             <div class="row">
                                 <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
                                     <div class="testimonial_slider_text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nisi tempora explicabo cum consequatur corporis hic doloribus! Eos repellat nulla necessitatibus explicabo, minima veritatis sit culpa dicta dolorem quisquam odit.</p>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… tất cả đều khởi nguồn từ nhận thức.</p>
                                         <h4>Nguyễn Thị Liên</h4>
                                         
                                     </div>
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="col-xl-4 d-none d-xl-block">
                                     <div class="testimonial_slider_text">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis recusandae repudiandae necessitatibus! Itaque doloremque optio in. Illum, repellat, a, sapiente atque nam iste eaque aspernatur neque voluptatibus dicta accusamus quaerat.</p>
+                                        <p>Nhận thức chính là thước đo cho sự trưởng thành của con người. Một khi có nhận thức logic, đúng đắn thì mọi thứ sẽ nhẹ nhàng hơn. Mình sẽ biết mình là ai, sứ mạng của cuộc đời mình là gì, thì sẽ sống một cuộc đời ý nghĩa, trọn vẹn, không hối tiếc.</p>
                                         <h4>Nguyễn Thị Liên </h4>
                                         
                                     </div>
@@ -160,7 +160,7 @@
                             <div class="row">
                                 <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
                                     <div class="testimonial_slider_text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ratione maxime delectus sapiente saepe minima sed culpa animi excepturi ab possimus, libero numquam distinctio necessitatibus sint assumenda dolores et voluptas.</p>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… tất cả đều khởi nguồn từ nhận thức.</p>
                                         <h4>Nguyễn Thị Liên</h4>
                                         
                                     </div>
@@ -172,7 +172,7 @@
                                 </div>
                                 <div class="col-xl-4 d-none d-xl-block">
                                     <div class="testimonial_slider_text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam atque, maiores dolor nihil nam, alias tenetur ut placeat accusantium nemo, blanditiis ea. In dolorum accusamus non officia vel necessitatibus quam? </p>
+                                        <p>Nhận thức chính là thước đo cho sự trưởng thành của con người. Một khi có nhận thức logic, đúng đắn thì mọi thứ sẽ nhẹ nhàng hơn. Mình sẽ biết mình là ai, sứ mạng của cuộc đời mình là gì, thì sẽ sống một cuộc đời ý nghĩa, trọn vẹn, không hối tiếc. </p>
                                         <h4>Nguyễn Thị Liên</h4>
                                         
                                     </div>

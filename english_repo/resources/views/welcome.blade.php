@@ -105,7 +105,7 @@
                         <div class="banner_text_iner">
                             <!-- <h5>Every child yearns to learn</h5> -->
                             <h1>Let's Learn English</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet nam porro maxime officiis alias aliquid eligendi, error, quidem dicta excepturi debitis natus temporibus! Qui ex nemo repudiandae earum quisquam? </p>
+                            <h3>Học, học nữa, học mãi </h3>
                             <!-- <a href="#" class="btn_1">View Course </a>
                             <a href="#" class="btn_2">Get Started </a> -->
                         </div>

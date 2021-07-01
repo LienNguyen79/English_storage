@@ -181,11 +181,12 @@
                             <div class="row">
                                 <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
                                     <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. 
+                                        Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, 
+                                        người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… 
+                                        tất cả đều khởi nguồn từ nhận thức.</p>
+                                        <h4>Nguyen Thi Lien</h4>
+                                        <h5> Web designer</h5>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-2 col-sm-4">
@@ -195,11 +196,12 @@
                                 </div>
                                 <div class="col-xl-4 d-none d-xl-block">
                                     <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. 
+                                        Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, 
+                                        người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… 
+                                        tất cả đều khởi nguồn từ nhận thức.</p>
+                                        <h4>Nguyen Thi Lien</h4>
+                                        <h5> Web designer</h5>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 d-none d-xl-block">
@@ -213,11 +215,12 @@
                             <div class="row">
                                 <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
                                     <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. 
+                                        Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, 
+                                        người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… 
+                                        tất cả đều khởi nguồn từ nhận thức.</p>
+                                        <h4>Nguyen Thi Lien</h4>
+                                        <h5>Web designer</h5>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-2 col-sm-4">
@@ -227,16 +230,17 @@
                                 </div>
                                 <div class="col-xl-4 d-none d-xl-block">
                                     <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. 
+                                        Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, 
+                                        người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… 
+                                        tất cả đều khởi nguồn từ nhận thức.</p>
+                                        <h4>Nguyen Thi Lien</h4>
+                                        <h5> Web designer</h5>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 d-none d-xl-block">
                                     <div class="testimonial_slider_img">
-                                        <img src="iimage_frontendmg/testimonial_img_1.png" alt="#">
+                                        <img src="image_frontend/testimonial_img_1.png" alt="#">
                                     </div>
                                 </div>
                             </div>
@@ -245,11 +249,12 @@
                             <div class="row">
                                 <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
                                     <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. 
+                                        Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, 
+                                        người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… 
+                                        tất cả đều khởi nguồn từ nhận thức.</p>
+                                        <h4>Nguyen Thi Lien</h4>
+                                        <h5>Web designer</h5>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-2 col-sm-4">
@@ -259,11 +264,12 @@
                                 </div>
                                 <div class="col-xl-4 d-none d-xl-block">
                                     <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <p>Tương lai mỗi người là do nhận thức quyết định tất cả. 
+                                        Thành người sâu sắc hay hời hợt, người tích cực hay bi quan, 
+                                        người hạnh phúc hay bất hạnh, người chiến thắng hay thất bại,… 
+                                        tất cả đều khởi nguồn từ nhận thức.</p>
+                                        <h4>Nguyen Thi Lien</h4>
+                                        <h5> Web designer</h5>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 d-none d-xl-block">
@@ -319,7 +325,7 @@
                     <div class="single-footer-widget footer_2">
                         <h4>Kết nối với chúng tôi</h4>
                         <div class="contact_info">
-                            <p><span> Địa chỉ :</span> Số 3 Duy Tân, Càu Giấy, Hà Nội </p>
+                            <p><span> Địa chỉ :</span> Số 3 Duy Tân, Cầu Giấy, Hà Nội </p>
                             <p><span> Điện thoại :</span> +84 328857765</p>
                             <p><span> Email : </span>nguyenliensera@gmail.com </p>
                         </div>
